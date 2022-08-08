@@ -4,6 +4,7 @@ import './App.css';
 
 // 関数でAppコンポーネントを定義している
 function App() {
+  // AppコンポーネントではHTML要素を返している
   return (
     <div className='App'>
       <header className='App-header'>
