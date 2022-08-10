@@ -4,14 +4,17 @@ import './index.css';
 import App from './App';
 import Hello from './components/Hello';
 import Message from './components/Message';
+import Name from './components/Name';
+import ContainerSample from './components/ContainerSample';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  // JSXタグ
-  <React.StrictMode>
-    <Message />
-  </React.StrictMode>
+    // JSXタグ
+    <React.StrictMode>
+        <Name />
+        <ContainerSample />
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
