@@ -7,6 +7,7 @@ import Message from './components/Message';
 import Name from './components/Name';
 import ContainerSample from './components/ContainerSample';
 import reportWebVitals from './reportWebVitals';
+import Page from './components/ContextSample';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -14,6 +15,7 @@ root.render(
     <React.StrictMode>
         <Name />
         <ContainerSample />
+        <Page />
     </React.StrictMode>
 );
 
