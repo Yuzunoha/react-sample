@@ -8,6 +8,7 @@ import Name from './components/Name';
 import ContainerSample from './components/ContainerSample';
 import reportWebVitals from './reportWebVitals';
 import Page from './components/ContextSample';
+import State1 from './components/State1';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Name />
         <ContainerSample />
         <Page />
+        <State1 initialValue={100} />
     </React.StrictMode>
 );
 
