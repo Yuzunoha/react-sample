@@ -9,6 +9,7 @@ import ContainerSample from './components/ContainerSample';
 import reportWebVitals from './reportWebVitals';
 import Page from './components/ContextSample';
 import State1 from './components/State1';
+import ReduceCounter from './components/Reducer1';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -18,6 +19,7 @@ root.render(
         <ContainerSample />
         <Page />
         <State1 initialValue={100} />
+        <ReduceCounter initialValue={100} />
     </React.StrictMode>
 );
 
