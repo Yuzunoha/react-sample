@@ -12,6 +12,7 @@ import State1 from './components/State1';
 import ReduceCounter from './components/Reducer1';
 import ReduceCounter2 from './components/Reducer2';
 import { Parent } from './components/Parent';
+import Callback1 from './components/Callback1';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -24,6 +25,7 @@ root.render(
         <ReduceCounter initialValue={100} />
         <ReduceCounter2 initialValue={100} />
         <Parent />
+        <Callback1 />
     </>
 );
 
