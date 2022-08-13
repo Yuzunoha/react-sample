@@ -11,18 +11,20 @@ import Page from './components/ContextSample';
 import State1 from './components/State1';
 import ReduceCounter from './components/Reducer1';
 import ReduceCounter2 from './components/Reducer2';
+import { Parent } from './components/Parent';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     // JSXタグ
-    <React.StrictMode>
+    <>
         <Name />
         <ContainerSample />
         <Page />
         <State1 initialValue={100} />
         <ReduceCounter initialValue={100} />
         <ReduceCounter2 initialValue={100} />
-    </React.StrictMode>
+        <Parent />
+    </>
 );
 
 // If you want to start measuring performance in your app, pass a function
