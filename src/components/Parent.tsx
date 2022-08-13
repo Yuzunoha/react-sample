@@ -13,22 +13,33 @@ const Fizz = (props: FizzProps) => {
     return <span>{isFizz ? 'Fizz' : ''}</span>;
 };
 
-type BuzzProps = { isBuzz: boolean };
+type BuzzProps = {
+    isBuzz: boolean;
+    onClick: () => void;
+};
 
 // Buzzはメモ化した関数コンポーネント
 // isBuzzがtrueの場合はBuzzと表示し、それ以外は何も表示しない
 // 親コンポーネントが再描画されても、isBuzzが変化しない限りはBuzzは再描画しない
 const Buzz = memo<BuzzProps>((props: BuzzProps) => {
-    const { isBuzz } = props;
+    const { isBuzz, onClick } = props;
     p(`Buzzが再描画されました isBuzz=${isBuzz}`);
-    return <span>{isBuzz ? 'Buzz' : ''}</span>;
+    return <span onClick={onClick}>{isBuzz ? 'Buzz' : ''}</span>;
 });
+
+const onBuzzClick = () => {
+    p(`Buzzが再描画されました isBuzz=${gIsBuzz}`);
+};
+
+let gIsBuzz = false;
 
 // この形式でexportしたときはimport { Parent } from ... で読み込む
 export const Parent = () => {
     const [count, setCount] = useState(1);
     const isFizz = count % 3 === 0;
     const isBuzz = count % 5 === 0;
+
+    gIsBuzz = isBuzz;
 
     p(`Parentが再描画されました count=${count}`);
 
@@ -38,7 +49,7 @@ export const Parent = () => {
             <p>{`現在のカウント: ${count}`}</p>
             <p>
                 <Fizz isFizz={isFizz}></Fizz>
-                <Buzz isBuzz={isBuzz}></Buzz>
+                <Buzz isBuzz={isBuzz} onClick={onBuzzClick}></Buzz>
             </p>
         </div>
     );
