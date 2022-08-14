@@ -14,6 +14,7 @@ import ReduceCounter2 from './components/Reducer2';
 import { Parent } from './components/Parent';
 import Callback1 from './components/Callback1';
 import { UseMemoSample } from './components/UseMemoSample';
+import { Clock } from './components/Clock';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -28,6 +29,7 @@ root.render(
         <Parent />
         <Callback1 />
         <UseMemoSample />
+        <Clock />
     </>
 );
 
