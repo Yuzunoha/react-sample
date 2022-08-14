@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ChangeEventHandler } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // タイマーが呼び出される周期を一秒にする
 const UPDATE_CYCLE = 1000;
