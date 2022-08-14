@@ -56,7 +56,7 @@ export const Clock = () => {
 
     // イベントの値をlocalstorageに保存するコールバック関数
     const callbackSetLocale: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
-        return setLocale(getLocaleFromString(e.target.value));
+        setLocale(getLocaleFromString(e.target.value));
     };
 
     return (
